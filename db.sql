@@ -1,0 +1,43 @@
+CREATE DATABASE student_db;
+
+USE student_db;
+
+CREATE TABLE students (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    firstName VARCHAR(255) NOT NULL,
+    lastName VARCHAR(255) NOT NULL,
+    middleName VARCHAR(255),
+    birthDate DATE NOT NULL,
+    targetEducation ENUM('Да', 'Нет') NOT NULL,
+    citizenship VARCHAR(255) NOT NULL DEFAULT 'Российская Федерация',
+    birthPlace VARCHAR(255) NOT NULL,
+    passportSeriesNumber VARCHAR(255) NOT NULL,
+    passportIssueDate DATE NOT NULL,
+    registrationRegion VARCHAR(255) NOT NULL,
+    registrationCity VARCHAR(255) NOT NULL,
+    registrationAddress VARCHAR(255) NOT NULL,
+    snils VARCHAR(255) NOT NULL,
+    educationBase ENUM('Высшее образование', 'Начальное профессиональное образование', 'Общее образование на базе 11 классов', 'Общее образование на базе 9 классов', 'Среднее профессиональное образование') NOT NULL,
+    graduationYear YEAR NOT NULL,
+    educationInstitution VARCHAR(255) NOT NULL,
+    educationDocument ENUM('Аттестат', 'Диплом') NOT NULL,
+    educationDocumentNumber VARCHAR(255) NOT NULL,
+    foreignLanguage1 ENUM('Английский', 'Немецкий', 'Французский', 'Итальянский', 'Испанский', 'Китайский', 'Японский') NOT NULL,
+    foreignLanguage2 ENUM('Английский', 'Немецкий', 'Французский', 'Итальянский', 'Испанский', 'Китайский', 'Японский'),
+    phoneNumber VARCHAR(255) NOT NULL,
+    disability ENUM('Да', 'Нет') NOT NULL,
+    guardianship ENUM('Да', 'Нет') NOT NULL,
+    chaes ENUM('Да', 'Нет') NOT NULL,
+    orphan ENUM('Да', 'Нет') NOT NULL,
+    priorityAdmission ENUM('Да', 'Нет') NOT NULL,
+    specialConditions ENUM('Да', 'Нет') NOT NULL,
+    dormitoryRequired ENUM('Да', 'Нет') NOT NULL,
+    firstSecondaryEducation ENUM('Да', 'Нет') NOT NULL,
+    representativeName VARCHAR(255),
+    representativePhoneNumber VARCHAR(255),
+    triples INT,
+    quadruples INT,
+    fives INT,
+    averageScore FLOAT,
+    uniqueKeyHash VARCHAR(255) NOT NULL
+);
